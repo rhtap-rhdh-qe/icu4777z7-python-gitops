@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: icu4777z7-python
+  janus-idp.io/tekton: icu4777z7-python
+  backstage.io/kubernetes-id: icu4777z7-python
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: icu4777z7-python
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
